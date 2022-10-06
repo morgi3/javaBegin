@@ -1,6 +1,8 @@
 String Boodschappen = "Boodschappenlijstje";
 int regels = 0;
 boolean erase = false;
+import processing.sound.*;
+  SoundFile file;
 // Tittel
 
 import controlP5.*;
@@ -30,10 +32,6 @@ void setup(){
                 .setText("  wat ik wil ")
                 .setCaptionLabel("Boodschappen")
                 .setColorLabel(color(115,200,115));
-
-Button mijnArray;
-
-mijnArray = cp.addButton("mijnArray");
 // textveld en knop maken
 }
 
@@ -44,11 +42,17 @@ textSize(40);
 text (Boodschappen, 200, 100);
 // text op scherm plaatsen
 }
+  
 
-
-void knop1(){
-  fill(0);
-  textSize(15);
+void clear(){
+    int rect = 0;
+    fill(0);
+    textSize(800);
+    rect(0,0 ,2000, 2000 + (0 * regels));
+    regels = 0;
+ SoundFile file;
+    file = new SoundFile(this,"[YT2mp3.info] - Ding - Sound Effect (HD) (320kbps).mp3");
+    file.play();
 }
 
 
